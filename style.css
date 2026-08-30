@@ -34,3 +34,7 @@ footer {
         margin-top: 0;
     }
 }
+
+.formulario h1 p {
+    text-align: center;
+}
