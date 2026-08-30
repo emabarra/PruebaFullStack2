@@ -2,6 +2,10 @@ html {
     height: 100%;
 }
 
+.container-fluid p {
+    color: #333333;
+}
+
 body {
     background-color: #f7f7f7;
 }
@@ -11,10 +15,22 @@ body {
     font-family: 'Montserrat';
 }
 
+.miClase img {
+    width: 70px;
+    height: 70px;
+}
+
 .footer a {
     color: #2e8b57;
 }
 
 footer {
     background-color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
 }
