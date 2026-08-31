@@ -7,13 +7,13 @@ function enviar() {
     var telefono = document.getElementById("txtTelefono").value;
 
     if (nombre == "" || nombre.length < 3) {
-        alert("Debes ingresar un nombre valido");
+        alert("Debes ingresar un nombre valido.");
     } else if (apellido == "" || apellido.length < 3) {
-        alert("Debes ingresar un apellido valido");
+        alert("Debes ingresar un apellido valido.");
     } else if (correo == "") {
-        alert("Debes ingresar un correo electronico");
+        alert("Debes ingresar un correo electronico.");
     } else if (telefono == "" || telefono.length < 6) {
-        alert("Debes ingresar un telefono valido");
+        alert("Debes ingresar un telefono valido.");
     } else {
         var usuario = [
             {
@@ -30,6 +30,7 @@ function enviar() {
         console.log("STORAGE SIN PARSE: ", storage);
         console.log("STORAGE CON PARSE: ", JSON.parse(storage));
 
+        alert("Formulario enviado exitosamente");
 
     }
 }

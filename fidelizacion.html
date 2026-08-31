@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Fidelización</title>
 </head>
@@ -61,33 +60,33 @@
 
     <main>
         <section id="formulario">
-            <h1>¿En que consiste nuestra fidelización?</h1>
-            <p>Nuestro sistema de fidelización es centrada en <strong>ofertas especiales</strong> para nuestros
-                clientes, lo unico que tienes que hacer es llenar este <strong>formulario</strong> y te llegaran ofertas
-                imperdibles.</p>
             <div class="container">
+                <h1>¿En que consiste nuestra fidelización?</h1>
+                <p>Nuestro sistema de fidelización es centrada en <strong>ofertas especiales</strong> para nuestros
+                    clientes, lo unico que tienes que hacer es llenar este <strong>formulario</strong> y te llegaran
+                    ofertas
+                    imperdibles.</p>
                 <h2>Ingresa tus datos</h2>
                 <form action="#">
                     <div class="row">
                         <div class="col-6 mt-3">
                             <label for="txtNombre">Nombre</label>
-                            <input type="txtNombre" class="form-control" type="text" placeholder="Ingrese su nombre">
+                            <input id="txtNombre" class="form-control" type="text" placeholder="Ingrese su nombre">
                         </div>
 
                         <div class="col-6 mt-3">
                             <label for="txtApellido">Apellido</label>
-                            <input type="txtApellifo" class="form-control" type="text"
-                                placeholder="Ingrese su apellido">
+                            <input id="txtApellido" class="form-control" type="text" placeholder="Ingrese su apellido">
                         </div>
 
                         <div class="col-6 mt-3">
                             <label for="txtCorreo">Correo</label>
-                            <input type="txtCorreo" class="form-control" type="email" placeholder="Ingrese su correo">
+                            <input id="txtCorreo" class="form-control" type="email" placeholder="Ingrese su correo">
                         </div>
 
                         <div class="col-6 mt-3">
                             <label for="txtTelefono">Telefono</label>
-                            <input type="txtTelefono" class="form-control" type="number"
+                            <input id="txtTelefono" class="form-control" type="text"
                                 placeholder="Ingrese su telefono ej:912345678">
                         </div>
 
@@ -112,7 +111,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="function.js"></script>
 
 </body>
 
