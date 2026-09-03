@@ -1,19 +1,11 @@
 productos = [
     {
-        "id": "FR001",
-        "nombre": "Manzanas Fuji",
-        "precio por kg": 1200,
-        "stock en kg": 150,
-        "descripcion": "Manzanas Fuji crujientes y dulces, cultivadas en el Valle del Maule. Perfectas para meriendas saludables o como ingrediente en postres. Estas Manzanas son conocidas por su textura firme y su sabor equilibrado entre dulce y ácido.",
-        "imagen": "imagenes/ManzanaFuji.jpg"
-    },
-    {
-        "id": "FR002",
-        "nombre": "Naranjas Valencia",
-        "precio por kg": 1000,
-        "stock en kg": 200,
-        "descripcion": "Jugosas y ricas en vitamina C, estas naranjas Valencia son ideales para jugos frescos y refrescantes. Cultivadas en condiciones climáticas óptimas que aseguran su dulzura y jugosidad.",
-        "imagen": "imagenes/NaranjaValencia.jpeg"
+        "id": "PL001",
+        "nombre": "-",
+        "precio por g": 1,
+        "stock": 1,
+        "descripcion": "-",
+        "imagen": "imagenes/-"
     }
 ]
 
