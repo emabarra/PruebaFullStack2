@@ -1,19 +1,28 @@
 productos = [
     {
-        "id": "FR001",
-        "nombre": "Manzanas Fuji",
+        "id": "VR001",
+        "nombre": "Zanahorias Orgánicas",
         "precio por kg": 1200,
-        "stock en kg": 150,
-        "descripcion": "Manzanas Fuji crujientes y dulces, cultivadas en el Valle del Maule. Perfectas para meriendas saludables o como ingrediente en postres. Estas Manzanas son conocidas por su textura firme y su sabor equilibrado entre dulce y ácido.",
-        "imagen": "imagenes/ManzanaFuji.jpg"
+        "stock en kg": 100,
+        "descripcion": "Zanahorias crujientes cultivadas sin pesticidas en la Región de O'Higgins. Excelente fuente de vitamina A y fibra, ideales para ensaladas, jugos o como snack saludable.",
+        "imagen": "../imagenes/Zanahoria-org.jpg"
     },
     {
-        "id": "FR002",
-        "nombre": "Naranjas Valencia",
-        "precio por kg": 1000,
-        "stock en kg": 200,
-        "descripcion": "Jugosas y ricas en vitamina C, estas naranjas Valencia son ideales para jugos frescos y refrescantes. Cultivadas en condiciones climáticas óptimas que aseguran su dulzura y jugosidad.",
-        "imagen": "imagenes/NaranjaValencia.jpeg"
+        "id": "VR002",
+        "nombre": "Espinacas Frescas",
+        "precio por bolsa de 50g": 700,
+        "stock en kg": 80,
+        "descripcion": "Espinacas frescas y nutritivas, perfectas para ensaladas y batidos verdes. Estas espinacas son cultivadas bajo prácticas orgánicas que garantizan su calidad y valor nutricional.",
+        "imagen": "../imagenes/fresh-spinach.jpg"
+    },
+    {
+        "id": "VR003",
+        "nombre": "Pimientos Tricolores",
+        "precio por kg": 1500,
+        "stock en kg": 120,
+        "descripcion": "Pimientos rojos, amarillos y verdes, ideales para salteados y platos coloridos. Ricos en antioxidantes y vitaminas, estos pimientos añaden un toque vibrante y saludable a cualquier receta.",
+        "imagen": "../imagenes/tricolor-pim.jpg"
+
     }
 ]
 

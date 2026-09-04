@@ -1,11 +1,11 @@
 productos = [
     {
-        "id": "PL001",
-        "nombre": "-",
-        "precio por g": 1,
-        "stock": 1,
-        "descripcion": "-",
-        "imagen": "imagenes/-"
+        "id": "PO001",
+        "nombre": "Miel Orgánica",
+        "precio por g": 5000,
+        "stock": 50,
+        "descripcion": "Miel pura y orgánica producida por apicultores locales. Rica en antioxidantes y con un sabor inigualable, perfecta para endulzar de manera natural tus comidas y bebidas.",
+        "imagen": "../imagenes/organic-honey.jpg"
     }
 ]
 
