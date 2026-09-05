@@ -46,11 +46,11 @@ for (const i of productos) {
     card.appendChild(imagen);
 
     const precio = document.createElement("h1");
-    precio.textContent = i["precio por kg"];
+    precio.textContent = `Precio por kg: $${i["precio por kg"]}`;
     card.appendChild(precio);
 
     const stock = document.createElement("h1");
-    stock.textContent = i["stock en kg"];
+    stock.textContent = `Stock disponible ${i["stock en kg"]} kg`;
     card.appendChild(stock);
 
     const descripcion = document.createElement("h1");

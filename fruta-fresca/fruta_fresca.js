@@ -15,7 +15,7 @@ productos = [
         "descripcion": "Jugosas y ricas en vitamina C, estas naranjas Valencia son ideales para jugos frescos y refrescantes. Cultivadas en condiciones climáticas óptimas que aseguran su dulzura y jugosidad.",
         "imagen": "../imagenes/NaranjaValencia.jpeg"
     }
-]
+];
 
 const section = document.getElementById("productos");
 
@@ -37,11 +37,11 @@ for (const i of productos) {
     card.appendChild(imagen);
 
     const precio = document.createElement("h1");
-    precio.textContent = i["precio por kg"];
+    precio.textContent = `Precio por kg: $${i["precio por kg"]}`;
     card.appendChild(precio);
 
     const stock = document.createElement("h1");
-    stock.textContent = i["stock en kg"];
+    stock.textContent = `Stock disponible: ${i["stock en kg"]} kg`;
     card.appendChild(stock);
 
     const descripcion = document.createElement("h1");
@@ -64,19 +64,20 @@ for (const i of productos) {
 
 const LLAVE = "carrito";
 
-function guardar(productos) {
-    console.log(productos);
+document.addEventListener("DOMContentLoaded", mostrarCarrito);
+
+function guardar(producto) {
+    console.log(producto);
     lista = [];
 
     var storageActual = localStorage.getItem(LLAVE);
     var storageParse = JSON.parse(storageActual);
 
     if (storageActual != null) {
-        storageParse.push(productos);
+        storageParse.push(producto);
         localStorage.setItem(LLAVE, JSON.stringify(storageParse));
     } else {
-        lista.push(productos);
+        lista.push(producto);
         localStorage.setItem(LLAVE, JSON.stringify(lista));
     }
-
 }
