@@ -38,7 +38,7 @@ html {
 }
 
 .footer-nav a:hover {
-    color: rgba(255, 0, 255, 0.752)
+    color: white;
 }
 
 .card-contenedor {
@@ -64,4 +64,14 @@ html {
 
 #vistas i {
     font-size: 4rem;
+}
+
+.contenido-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
