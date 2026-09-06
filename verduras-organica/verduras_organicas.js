@@ -2,31 +2,37 @@ productos = [
     {
         "id": "VR001",
         "nombre": "Zanahorias Orgánicas",
-        "precio por kg": 1200,
-        "stock en kg": 100,
+        "precio": 1200,
+        "stock": 100,
         "descripcion": "Zanahorias crujientes cultivadas sin pesticidas en la Región de O'Higgins. Excelente fuente de vitamina A y fibra, ideales para ensaladas, jugos o como snack saludable.",
         "imagen": "../imagenes/Zanahoria-org.jpg"
     },
     {
         "id": "VR002",
         "nombre": "Espinacas Frescas",
-        "precio por bolsa de 50g": 700,
-        "stock en kg": 80,
+        "precio": 700,
+        "stock": 80,
         "descripcion": "Espinacas frescas y nutritivas, perfectas para ensaladas y batidos verdes. Estas espinacas son cultivadas bajo prácticas orgánicas que garantizan su calidad y valor nutricional.",
         "imagen": "../imagenes/fresh-spinach.jpg"
     },
     {
         "id": "VR003",
         "nombre": "Pimientos Tricolores",
-        "precio por kg": 1500,
-        "stock en kg": 120,
+        "precio": 1500,
+        "stock": 120,
         "descripcion": "Pimientos rojos, amarillos y verdes, ideales para salteados y platos coloridos. Ricos en antioxidantes y vitaminas, estos pimientos añaden un toque vibrante y saludable a cualquier receta.",
         "imagen": "../imagenes/tricolor-pim.jpg"
 
     }
-]
+];
+
+const LLAVE = "carrito";
 
 const section = document.getElementById("productos");
+const listaCarrito = document.getElementById("lista");
+const divTotal = document.getElementById("total");
+const btnFinalizar = document.getElementById("btn-finalizar");
+const mensajeCompra = document.getElementById("mensaje-compra")
 
 const contenedorCard = document.createElement("div");
 contenedorCard.className = "contenedor-card";
@@ -46,11 +52,11 @@ for (const i of productos) {
     card.appendChild(imagen);
 
     const precio = document.createElement("h1");
-    precio.textContent = `Precio por kg: $${i["precio por kg"]}`;
+    precio.textContent = `Precio por kg: $${i.precio}`;
     card.appendChild(precio);
 
     const stock = document.createElement("h1");
-    stock.textContent = `Stock disponible ${i["stock en kg"]} kg`;
+    stock.textContent = `Stock disponible: ${i.stock} kg`;
     card.appendChild(stock);
 
     const descripcion = document.createElement("h1");
@@ -69,12 +75,14 @@ for (const i of productos) {
     })
 
     contenedorBtn.appendChild(btnAgregarCarro);
+    card.appendChild(contenedorBtn);
+    contenedorCard.appendChild(card);
 }
 
-const LLAVE = "carrito";
+//const LLAVE = "carrito";
 
-function guardar(productos) {
-    console.log(productos);
+function guardar(producto) {
+    /*console.log(productos);
     lista = [];
 
     var storageActual = localStorage.getItem(LLAVE);
@@ -86,6 +94,76 @@ function guardar(productos) {
     } else {
         lista.push(productos);
         localStorage.setItem(LLAVE, JSON.stringify(lista));
+    }*/
+
+    const storageActual = localStorage.getItem(LLAVE);
+    const lista = storageActual ? JSON.parse(storageActual) : [];
+
+    lista.push(producto);
+    localStorage.setItem(LLAVE, JSON.stringify(lista));
+
+    if (mensajeCompra) mensajeCompra.textContent = "";
+    renderizarCarrito();
+}
+
+function renderizarCarrito() {
+    if (!listaCarrito || !divTotal) return;
+
+    listaCarrito.innerHTML = "";
+    const carrito = JSON.parse(localStorage.getItem(LLAVE)) || [];
+    let sumaTotal = 0;
+
+    if (carrito.length === 0) {
+        listaCarrito.innerHTML = "<li>El carrito está vacío</li>";
+        divTotal.textContent = "0";
+        if (btnFinalizar) btnFinalizar.style.display = "none";
+        return;
     }
 
+    if (btnFinalizar) btnFinalizar.style.display = "inline-block";
+
+    carrito.forEach((producto, index) => {
+        sumaTotal += producto.precio;
+
+        const item = document.createElement("li");
+        item.style.marginBottom = "10px";
+        item.textContent = `${producto.nombre} - $${producto.precio} `;
+
+        const btnEliminar = document.createElement("button");
+        btnEliminar.textContent = "Eliminar";
+        btnEliminar.className = "btn btn-danger btn-sm";
+        btnEliminar.addEventListener("click", function () {
+            eliminarDelCarrito(index);
+        });
+
+        item.appendChild(btnEliminar);
+        listaCarrito.appendChild(item);
+    });
+
+    divTotal.textContent = sumaTotal;
 }
+
+function eliminarDelCarrito(posicion) {
+    let carrito = JSON.parse(localStorage.getItem(LLAVE)) || [];
+    carrito.splice(posicion, 1);
+    localStorage.setItem(LLAVE, JSON.stringify(carrito));
+
+    if (mensajeCompra) mensajeCompra.textContent = "";
+    renderizarCarrito();
+}
+
+if (btnFinalizar) {
+    btnFinalizar.addEventListener("click", function () {
+        const carrito = JSON.parse(localStorage.getItem(LLAVE)) || [];
+
+        if (carrito.length > 0) {
+            localStorage.removeItem(LLAVE);
+            if (mensajeCompra) {
+                mensajeCompra.textContent = "¡Muchas gracias por tu compra! Tu pedido ha sido procesado con éxito.";
+            }
+            renderizarCarrito();
+        }
+    });
+}
+
+renderizarCarrito();
