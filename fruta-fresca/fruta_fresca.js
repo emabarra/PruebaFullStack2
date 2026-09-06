@@ -36,15 +36,15 @@ for (const i of productos) {
     imagen.src = i.imagen;
     card.appendChild(imagen);
 
-    const precio = document.createElement("h1");
+    const precio = document.createElement("h1"); /*cambio h1 por p*/
     precio.textContent = `Precio por kg: $${i["precio por kg"]}`;
     card.appendChild(precio);
 
-    const stock = document.createElement("h1");
+    const stock = document.createElement("h1"); /*cambio h1 por p*/
     stock.textContent = `Stock disponible: ${i["stock en kg"]} kg`;
     card.appendChild(stock);
 
-    const descripcion = document.createElement("h1");
+    const descripcion = document.createElement("p"); /*cambio h1 por p*/
     descripcion.textContent = i.descripcion;
     card.appendChild(descripcion);
 
@@ -60,12 +60,9 @@ for (const i of productos) {
     })
 
     contenedorBtn.appendChild(btnAgregarCarro);
-}
+};
 
 const LLAVE = "carrito";
-
-document.addEventListener("DOMContentLoaded", mostrarCarrito);
-
 function guardar(producto) {
     console.log(producto);
     lista = [];
