@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../perfil-usuario/usuario.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg miClase">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../perfil-usuario/usuario.html">Menu Usuario</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../principal/index.html">Pagina Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../"><i class="bi bi-boxes"></i>Historial de compras</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../login/login.html">Cerrar
+                                        Sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contenido">
+            <div class="contenido-contenedor">
+                <div class="row">
+                    <div class="mt-4">
+                        <h4>Historial de Compras</h4>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <section>
+        <div class="container-lg">
+            <div class="text-center mt-4 mb-4">
+                <h2>Lista de productos comprados</h2>
+                <div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">VO001</h5>
+                            </div>
+                            <p class="mb-1">Text.</p>
+                            <small>Text</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">PO001</h5>
+                            </div>
+                            <p class="mb-1">Text.</p>
+                            <small class="text-muted">Text</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">PL001</h5>
+                            </div>
+                            <p class="mb-1">Text.</p>
+                            <small class="text-muted">Text.</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">VO001</h5>
+                            </div>
+                            <p class="mb-1">Text</p>
+                            <small class="text-muted">Text</small>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <p>&copy Sitio web realizado por YZ spa - Versión 1.0</p>
+            <div class="footer-nav">
+                <a href="#">Políticas de Privacidad</a>
+                <a href="#">Terminos y Condiciones</a>
+                <a href="#">Ayuda</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../perfil-usuario/usuario.js"></script>
+</body>
+
+</html>
