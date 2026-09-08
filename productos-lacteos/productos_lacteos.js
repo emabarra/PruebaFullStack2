@@ -1,11 +1,11 @@
 productos = [
     {
         "id": "PL001",
-        "nombre": "-",
-        "precio por g": 1,
-        "stock": 1,
-        "descripcion": "-",
-        "imagen": "../imagenes/-"
+        "nombre": "Yogurt",
+        "precio": 2500,
+        "stock": 25,
+        "descripcion": "Nacido en el corazón del campo Chileno, este yogur rústico rescatra la utenticidad del campo en cada cucharada. Elaborado artesanalmente con leche entera y fresca de vacas criadas en libre pastoreo, destaca por su textura espesa, cremosa y ese toque ácido tan característico de las recetas de antes. Sin conservantes, espesantes ni procesos industriales: solo fermentos naturales, paciencia y el sabor puro de la naturaleza. Ideal para acompañar con miel silvestre, frutos secos o disfrutar solo, tal como sale de la paila.",
+        "imagen": "../imagenes/yogurt.jpg"
     }
 ]
 
@@ -29,11 +29,11 @@ for (const i of productos) {
     card.appendChild(imagen);
 
     const precio = document.createElement("h1");
-    precio.textContent = i["precio por kg"];
+    precio.textContent = `Precio: $${i["precio"]}`;
     card.appendChild(precio);
 
     const stock = document.createElement("h1");
-    stock.textContent = i["stock en kg"];
+    stock.textContent = `Stock: ${i["stock"]} unidades de 500gr`;
     card.appendChild(stock);
 
     const descripcion = document.createElement("h1");
