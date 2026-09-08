@@ -14,7 +14,32 @@ productos = [
         "stock en kg": 200,
         "descripcion": "Jugosas y ricas en vitamina C, estas naranjas Valencia son ideales para jugos frescos y refrescantes. Cultivadas en condiciones climáticas óptimas que aseguran su dulzura y jugosidad.",
         "imagen": "../imagenes/NaranjaValencia.jpeg"
-    }
+    },
+    {
+        "id": "FR003",
+        "nombre": "Uvas Thompson",
+        "precio por kg": 2500,
+        "stock en kg": 80,
+        "descripcion": "Uvas Thompson dulces y sin semilla, cultivadas en los soleados valles de la zona central. Excelentes para disfrutar frescas o en ensaladas de frutas. Destacan por su piel fina y gran jugosidad.",
+        "imagen": "../imagenes/uvas.jpg"
+    },
+    {
+        "id": "FR004",
+        "nombre": "Peras Packham",
+        "precio por kg": 1400,
+        "stock en kg": 120,
+        "descripcion": "Peras Packham jugosas y de textura suave, originarias de huertos del sur. Ideales para consumo directo o compotas. Estas peras son reconocidas por su pulpa blanca y sabor delicado.",
+        "imagen": "../imagenes/peras.jpg"
+    },
+    {
+        "id": "FR005",
+        "nombre": "Arándanos Frescos",
+        "precio por kg": 4000,
+        "stock en kg": 110,
+        "descripcion": "Arándanos frescos y firmes, cosechados a mano en la región de La Araucanía. Perfectos para batidos, repostería o como un snack rico en antioxidantes. Destacan por su intenso color azul y sabor dulce con un ligero toque ácido",
+        "imagen": "../imagenes/arandanos.jpg"
+    },
+    
 ];
 
 const section = document.getElementById("productos");

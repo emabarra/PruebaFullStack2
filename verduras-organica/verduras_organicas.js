@@ -23,6 +23,24 @@ productos = [
         "descripcion": "Pimientos rojos, amarillos y verdes, ideales para salteados y platos coloridos. Ricos en antioxidantes y vitaminas, estos pimientos añaden un toque vibrante y saludable a cualquier receta.",
         "imagen": "../imagenes/tricolor-pim.jpg"
 
+    },
+    {
+        "id": "VR004",
+        "nombre": "Brócoli Orgánico",
+        "precio": 1800,
+        "stock": 60,
+        "descripcion": "Brócoli fresco de cultivo orgánico, libre de pesticidas. Perfecto para cocinar al vapor, saltear o incorporar en sopas. Cultivado en suelos ricos que garantizan un color verde intenso y alto valor nutricional.",
+        "imagen": "../imagenes/brocoli.jpg"
+
+    },
+    {
+        "id": "VR005",
+        "nombre": "Tomates Cherry Orgánicos",
+        "precio": 2000,
+        "stock": 90,
+        "descripcion": "Tomates cherry vibrantes y llenos de sabor, cultivados bajo estrictos estándares orgánicos. Ideales para ensaladas frescas, picoteos o asados. Poseen un equilibrio perfecto entre acidez y dulzor.",
+        "imagen": "../imagenes/tomatecherry.jpg"
+
     }
 ];
 

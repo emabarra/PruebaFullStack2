@@ -6,7 +6,16 @@ productos = [
         "stock": 50,
         "descripcion": "Miel pura y orgánica producida por apicultores locales. Rica en antioxidantes y con un sabor inigualable, perfecta para endulzar de manera natural tus comidas y bebidas.",
         "imagen": "../imagenes/organic-honey.jpg"
+    },
+    {
+        "id": "PO002",
+        "nombre": "Avena Integral Orgánica",
+        "precio por g": 3500,
+        "stock": 250,
+        "descripcion": "Avena integral orgánica de grano entero, procesada cuidadosamente para mantener sus nutrientes. Perfecta para el desayuno, batidos o repostería saludable. Destaca por su alto contenido en fibra y textura consistente.",
+        "imagen": "../imagenes/avena.jpg"
     }
+
 ]
 
 const section = document.getElementById("productos");
